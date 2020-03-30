@@ -1,0 +1,10 @@
+datasource db {
+  provider = "postgresql"
+  url = "***"
+}
+
+model Product {
+  id          String  @default(cuid()) @id
+  name        String  @unique
+  description String?
+}
